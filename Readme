@@ -1,0 +1,7 @@
+ứng dụng find the coach Vue JS
+
+Phần 1: khởi tạo ứng dụng
+- npm install
+- npm install router-vue để cài gói package hỗ trợ route
+- viết route : import webhistory, createRoute ,
+- tạo biến gọi tới createRoute trong đó: gồm webhistoRy, route gồm mảng các đường dẫn (path) và component tương ứng của nó
