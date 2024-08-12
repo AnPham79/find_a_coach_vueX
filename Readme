@@ -5,3 +5,8 @@ Phần 1: khởi tạo ứng dụng
 - npm install router-vue để cài gói package hỗ trợ route
 - viết route : import webhistory, createRoute ,
 - tạo biến gọi tới createRoute trong đó: gồm webhistoRy, route gồm mảng các đường dẫn (path) và component tương ứng của nó
+- tạo các pages tương ứng
+- tạo component header để render tất cả các trang
+- App.vue để rendẻ dữ liệu của các page (router-view)
+- tạo navigation bằng cách tạo components/layouts/TheHeader
+- trong The Header tạo các link (route-link tương ứng để load các page con)

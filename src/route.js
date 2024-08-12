@@ -7,20 +7,21 @@ import RegisterReceived from './pages/requests/RegisterReceived.vue';
 import NotFound from './pages/NotFound.vue';
 
 const router = createRouter({
-    history : createWebHistory,
-    router : [
-        { path : '/', redirect : '/coaches' },
-        { path : '/coaches', component : CoachList },
+    history: createWebHistory(), // Gọi hàm createWebHistory
+    routes: 
+    [ // Đúng là routes chứ không phải router
+        { path: '/', redirect: '/coaches' },
+        { path: '/coaches', component: CoachList },
         { 
-            path: 'coaches/:id', 
+            path: '/coaches/:id', // Đường dẫn cần có dấu '/'
             component: CoachDetail, 
-            children : [
-                { path: 'contact', component : ContactCoach }
+            children: [
+                { path: 'contact', component: ContactCoach }
             ] 
         },
-        { path : '/register', component : CoachRegister },
-        { path : '/requests', component : RegisterReceived },
-        { path : '/:notFound(.*)', component : NotFound },
+        { path: '/register', component: CoachRegister },
+        { path: '/requests', component: RegisterReceived },
+        { path: '/:notFound(.*)', component: NotFound },
     ]
 })
 
