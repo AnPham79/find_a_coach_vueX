@@ -6,7 +6,7 @@
             </h1>
             <ul>
                 <li>
-                    <router-link to="/coachs">All Coachs</router-link>
+                    <router-link to="/coaches">All Coachs</router-link>
                 </li>
                 <li>
                     <router-link to="/requests">Requests</router-link>
