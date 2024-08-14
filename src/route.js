@@ -14,7 +14,7 @@ const router = createRouter({
         { path: '/coaches', component: CoachList },
         { 
             props : true,
-            path: '/coaches/:id', // Đường dẫn cần có dấu '/'
+            path: '/coaches/:id',
             component: CoachDetail, 
             children: [
                 { path: 'contact', component: ContactCoach }

@@ -16,7 +16,7 @@
     </section>
     <section>
         <base-card>
-            <base-badge v-for="area in areas" 
+            <base-badge v-for="area in selectedCoach.areas" 
                 :key="area" 
                 :type="area" 
                 :title="area">
@@ -32,6 +32,23 @@ export default {
     data() {
         return {
             selectedCoach : null
+        }
+    },
+    computed : {
+        fullname() {
+            return this.selectedCoach.firstName + '' + this.selectedCoach.lastName;
+        },
+        contactLink() {
+            return this.$route.path + '/' + this.id + '/contact';
+        },
+        areas() {
+            return this.selectedCoach.areas;
+        },
+        rate() {
+            return this.selectedCoach.hourlyRate;
+        },
+        description() {
+            return this.selectedCoach.description;
         }
     },
     created() {

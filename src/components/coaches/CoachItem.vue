@@ -15,13 +15,13 @@
 
 <script>
 export default {
-    props : ['firstName', 'lastName', 'rate', 'areas', 'description'],
+    props : [ 'id', 'firstName', 'lastName', 'rate', 'areas', 'description'],
     computed : {
         fullname() {
             return this.firstName + ' ' + this.lastName;
         },
         coachContactLink() {
-            return this.$route.path + '/' + this.id + '/contact' // coaches/1/contact;
+            return this.$route.path + '/' + this.id + '/contact'
         },
         coachDetailLink() {
             return this.$route.path + '/' + this.id
