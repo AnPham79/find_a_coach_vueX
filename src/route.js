@@ -13,6 +13,7 @@ const router = createRouter({
         { path: '/', redirect: '/coaches' },
         { path: '/coaches', component: CoachList },
         { 
+            props : true,
             path: '/coaches/:id', // Đường dẫn cần có dấu '/'
             component: CoachDetail, 
             children: [
